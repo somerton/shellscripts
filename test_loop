@@ -1,0 +1,32 @@
+#!/bin/sh
+qw=""
+##
+## network card ens36
+##
+if test "$qw" = "" 
+  then
+  qw=`/sbin/ip -o link show up | awk -v nc="ens36" -F ": " {'if ($2 == nc)  print $2 }'`
+fi
+##
+## network card ens45
+##
+if test "$qw" = "" 
+  then
+  qw=`/sbin/ip -o link show up | awk -v nc="ens45" -F ": " {'if ($2 == nc)  print $2 }'`
+fi
+##
+## network card ens33
+##
+if test "$qw" = "" 
+  then
+  qw=`/sbin/ip -o link show up | awk -v nc="ens33" -F ": " {'if ($2 == nc)  print $2 }'`
+fi
+##
+## network card not found
+##
+if test "$qw" = "" 
+  then
+  echo "NETWORK CARD NOT FOUND"
+fi
+echo $qw
+

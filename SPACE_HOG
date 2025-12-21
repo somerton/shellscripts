@@ -1,0 +1,4 @@
+#!
+cd /
+sudo du -m . | awk '{if ($1 > 100) print $1 "  " $NF}'
+
