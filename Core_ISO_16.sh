@@ -7,7 +7,7 @@
 #cp /home/user/Desktop/folder/ER15/ks.cfg /CORE/os-iso/ks.cfg
 #cp /home/user/Desktop/folder/ER15/isolinux.cfg /CORE/os-iso/isolinux/isolinux.cfg 
 #cp /home/user/Desktop/folder/ER15/grub.cfg /CORE/os-iso/EFI/BOOT/grub.cfg 
-    
+# new comment    
 # removing old ISO files
 sudo rm -rf /iso/test*.iso
 
