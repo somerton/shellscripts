@@ -3,7 +3,7 @@ print "\n"
 hostname
 print "\n"
 date
-echo "-----------------"
+echo "--####---------------"
 echo "User                     Slots Used                 Running since: \n"
 for p in $( ps -ef|grep slot|grep -v "grep"|awk '{print $1}'|sort -u)
 do
